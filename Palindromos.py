@@ -3,12 +3,12 @@
 import unittest
 
 def is_palindrome(mystring):
-    # Eliminar espacios en blanco y convertir a minúsculas
-    clean_string = ''.join(mystring.lower().split())
-
-    # Comparar la cadena original con su reverso
-    return clean_string == clean_string[::-1]
-    return True
+    for indice in range(len(mystring)):
+        print(mystring (indice) + " -> " + mystring[-(indice +1)])
+        if mystring[indice] != mystring[-(indice +1)]:
+            print("no es")
+            return False
+        return True 
 
 class TestPalindrome(unittest.TestCase):
     def test_a(self):
